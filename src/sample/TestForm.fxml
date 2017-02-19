@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="ConstructionSitesView" maxHeight="800.0" maxWidth="960.0" prefHeight="800.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Button fx:id="btnData" layoutX="21.0" layoutY="761.0" mnemonicParsing="false" text="Получить данные" />
+      <TableView fx:id="ConstructionSitesTable" editable="true" layoutX="28.0" layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0">
+        <columns>
+          <TableColumn fx:id="tableColConsSiteId" prefWidth="47.0" text="ID" />
+          <TableColumn fx:id="tableColConsSiteCity" prefWidth="142.0" text="Город" />
+            <TableColumn fx:id="tableColConsSiteStreet" prefWidth="179.0" text="Улица" />
+            <TableColumn fx:id="tableColConsSiteBilding" minWidth="0.0" prefWidth="70.0" text="Строение" />
+            <TableColumn fx:id="tableColStartDate" prefWidth="135.0" text="Дата начала работ" />
+            <TableColumn fx:id="tableColFinishDate" prefWidth="159.0" text="Дата окончания работ" />
+            <TableColumn fx:id="tableColManager" prefWidth="167.0" text="Ответственный" />
+        </columns>
+      </TableView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="CLOSED_HAND" />
+   </cursor>
+</AnchorPane>
