@@ -1,4 +1,4 @@
-package sample;
+package com.mcgrg.diploma.Main;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.layout.AnchorPane;
-import sample.Entity.ConstructionSites;
+import com.mcgrg.diploma.entity.ConstructionSites;
 
 public class Controller {
 
@@ -29,6 +29,7 @@ public class Controller {
 
     @FXML
     public void onClickMethod(){
+
         onButtonClick();
     }
 
@@ -58,13 +59,6 @@ public class Controller {
 
     @FXML
     public void initialize() {
-//        btnData.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
-//            @Override
-//            public void handle(MouseEvent mouseEvent) {
-//                onButtonClick();
-//            }
-//        });
-
     }
 
     public  void onButtonClick() {

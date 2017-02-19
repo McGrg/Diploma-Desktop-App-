@@ -1,4 +1,4 @@
-package sample.Entity;
+package com.mcgrg.diploma.entity;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;

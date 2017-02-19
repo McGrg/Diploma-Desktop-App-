@@ -1,4 +1,4 @@
-package sample;
+package com.mcgrg.diploma.Main;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("TestForm.fxml"));
         primaryStage.setTitle("TestView");
-        primaryStage.setScene(new Scene(root, 1280, 1024));
+        primaryStage.setScene(new Scene(root, 900, 650));
         primaryStage.show();
     }
 
