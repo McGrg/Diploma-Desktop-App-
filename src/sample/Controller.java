@@ -28,6 +28,11 @@ public class Controller {
     private Button btnData;
 
     @FXML
+    public void onClickMethod(){
+        onButtonClick();
+    }
+
+    @FXML
     private TableView<ConstructionSites> ConstructionSitesTable;
 
     @FXML
@@ -53,6 +58,16 @@ public class Controller {
 
     @FXML
     public void initialize() {
+//        btnData.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+//            @Override
+//            public void handle(MouseEvent mouseEvent) {
+//                onButtonClick();
+//            }
+//        });
+
+    }
+
+    public  void onButtonClick() {
         ConstructionSites site = new ConstructionSites(1, "Санкт-Петербург",
                 "Пискаревский пр.", "3",
                 "12.08.2015", "25.12.2016", "Петров Алексей");
@@ -66,5 +81,4 @@ public class Controller {
         tableColManager.setCellValueFactory(cellData->cellData.getValue().conssiteManagerProperty());
         ConstructionSitesTable.setItems(constructionSite);
     }
-
 }
