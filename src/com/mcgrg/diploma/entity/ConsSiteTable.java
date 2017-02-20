@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 /**
  * Created by MSI GT70 on 19.02.2017.
  */
-public class ConstructionSites {
+public class ConsSiteTable {
     private final SimpleIntegerProperty conssiteId;
     private final SimpleStringProperty conssiteCity;
     private final SimpleStringProperty conssiteStreet;
@@ -99,14 +99,8 @@ public class ConstructionSites {
         return manager;
     }
 
-    @Override
-    public String toString() {
-        return "ID: " + getConssiteId() + " " + getConssiteCity() + " "
-                + getConssiteStreet() + " " + getConssiteBilding() + " "
-                + getStartDate() + " " + getFinishDate() + " " + getManager();
-    }
 
-    public ConstructionSites(Integer conssiteId, String conssiteCity,
+    public ConsSiteTable(Integer conssiteId, String conssiteCity,
                              String conssiteStreet, String conssiteBilding,
                              String startDate, String finishDate,
                              String manager) {
@@ -118,4 +112,5 @@ public class ConstructionSites {
         this.finishDate = new SimpleStringProperty(finishDate);
         this.manager = new SimpleStringProperty(manager);
     }
+
 }
