@@ -1,4 +1,4 @@
-package com.mcgrg.diploma.Main;
+package com.mcgrg.diploma.Main.KindOfControllers;
 
 import com.google.gson.reflect.TypeToken;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
@@ -15,7 +15,7 @@ import javafx.scene.layout.AnchorPane;
 import javax.swing.*;
 import java.util.List;
 
-public class Controller {
+public class ConsSiteController {
 
     @FXML
     private AnchorPane ConstructionSitesView;
@@ -60,7 +60,7 @@ public class Controller {
         try {
             SelectEntityRequest ser = new SelectEntityRequest();
             List<ConstructionSite> consList = ser.setRequest(new TypeToken<List<ConstructionSite>>() {
-            }.getType(), "*");
+            }.getType());
             ObservableList<ConstructionSite> oConsList = FXCollections.observableArrayList(consList);
             tableColConsSiteId.setCellValueFactory(new PropertyValueFactory<ConstructionSite, Integer>("conssiteId"));
             tableColConsSiteCity.setCellValueFactory(new PropertyValueFactory<ConstructionSite, String>("conssiteCity"));
