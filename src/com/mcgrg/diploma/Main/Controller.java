@@ -2,7 +2,6 @@ package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
-import com.mcgrg.diploma.entity.ConsSiteTable;
 import com.mcgrg.diploma.entity.ConstructionSite;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -10,22 +9,13 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
 
 import javax.swing.*;
 import java.util.List;
 
 public class Controller {
-
-    private ObservableList<ConsSiteTable> constructionSite = FXCollections.observableArrayList();
-
-    public ObservableList<ConsSiteTable> getConstructionSite() {
-        return constructionSite;
-    }
-
-    public void setConstructionSite(ObservableList<ConsSiteTable> constructionSite) {
-        this.constructionSite = constructionSite;
-    }
 
     @FXML
     private AnchorPane ConstructionSitesView;
@@ -35,33 +25,32 @@ public class Controller {
 
     @FXML
     public void onClickMethod() {
-
         onButtonClick();
     }
 
     @FXML
-    private TableView<ConsSiteTable> ConstructionSitesTable;
+    private TableView<ConstructionSite> ConstructionSitesTable;
 
     @FXML
-    private TableColumn<ConsSiteTable, Integer> tableColConsSiteId;
+    private TableColumn<ConstructionSite, Integer> tableColConsSiteId;
 
     @FXML
-    private TableColumn<ConsSiteTable, String> tableColConsSiteCity;
+    private TableColumn<ConstructionSite, String> tableColConsSiteCity;
 
     @FXML
-    private TableColumn<ConsSiteTable, String> tableColConsSiteStreet;
+    private TableColumn<ConstructionSite, String> tableColConsSiteStreet;
 
     @FXML
-    private TableColumn<ConsSiteTable, String> tableColConsSiteBilding;
+    private TableColumn<ConstructionSite, String> tableColConsSiteBilding;
 
     @FXML
-    private TableColumn<ConsSiteTable, String> tableColStartDate;
+    private TableColumn<ConstructionSite, String> tableColStartDate;
 
     @FXML
-    private TableColumn<ConsSiteTable, String> tableColFinishDate;
+    private TableColumn<ConstructionSite, String> tableColFinishDate;
 
     @FXML
-    private TableColumn<ConsSiteTable, String> tableColManager;
+    private TableColumn<ConstructionSite, String> tableColManager;
 
     @FXML
     public void initialize() {
@@ -72,19 +61,15 @@ public class Controller {
             SelectEntityRequest ser = new SelectEntityRequest();
             List<ConstructionSite> consList = ser.setRequest(new TypeToken<List<ConstructionSite>>() {
             }.getType(), "*");
-
-            for (ConstructionSite site : consList) {
-                ConsSiteTable table = new ConsSiteTable(site.getConssiteId(), site.getConssiteCity(), site.getConssiteStreet(), site.getConssiteBilding(), site.getStartDate(), site.getFinishDate(), site.getManager());
-                constructionSite.add(table);
-                tableColConsSiteId.setCellValueFactory(cellData -> cellData.getValue().conssiteIdProperty().asObject());
-                tableColConsSiteCity.setCellValueFactory(cellData -> cellData.getValue().conssiteCityProperty());
-                tableColConsSiteStreet.setCellValueFactory(cellData -> cellData.getValue().conssiteStreetProperty());
-                tableColConsSiteBilding.setCellValueFactory(cellData -> cellData.getValue().conssiteBildingProperty());
-                tableColStartDate.setCellValueFactory(cellData -> cellData.getValue().conssiteStartDateProperty());
-                tableColFinishDate.setCellValueFactory(cellData -> cellData.getValue().conssiteFinishDateProperty());
-                tableColManager.setCellValueFactory(cellData -> cellData.getValue().conssiteManagerProperty());
-                ConstructionSitesTable.setItems(constructionSite);
-            }
+            ObservableList<ConstructionSite> oConsList = FXCollections.observableArrayList(consList);
+            tableColConsSiteId.setCellValueFactory(new PropertyValueFactory<ConstructionSite, Integer>("conssiteId"));
+            tableColConsSiteCity.setCellValueFactory(new PropertyValueFactory<ConstructionSite, String>("conssiteCity"));
+            tableColConsSiteStreet.setCellValueFactory(new PropertyValueFactory<ConstructionSite, String>("conssiteStreet"));
+            tableColConsSiteBilding.setCellValueFactory(new PropertyValueFactory<ConstructionSite, String>("conssiteBilding"));
+            tableColStartDate.setCellValueFactory(new PropertyValueFactory<ConstructionSite, String>("startDate"));
+            tableColFinishDate.setCellValueFactory(new PropertyValueFactory<ConstructionSite, String>("finishDate"));
+            tableColManager.setCellValueFactory(new PropertyValueFactory<ConstructionSite, String>("manager"));
+            ConstructionSitesTable.setItems(oConsList);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.toString(),
                     "Ошибка!",
