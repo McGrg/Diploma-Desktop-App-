@@ -16,7 +16,7 @@ public class SelectEntityRequest<T> {
         String tablename = classname.delete(0, classname.lastIndexOf(".") + 1).deleteCharAt(classname.length() - 1).toString().toLowerCase();
         String strRequest = "SELECT " + column + " FROM diploma." + tablename + ";";
         System.out.println(strRequest);
-        HttpRequest request = HttpRequest.get("http://127.0.0.1:8080/ServletDBMySql", true, "sql", strRequest, "table", tablename);
+        HttpRequest request = HttpRequest.post("http://127.0.0.1:8080/ServletDBMySql", true, "sql", strRequest, "table", tablename);
         System.out.println(request.code());
         if (request.code() == 200) {
             parsegson = new Gson().fromJson(request.body(), itemListType);
