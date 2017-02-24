@@ -3,7 +3,7 @@ package com.mcgrg.diploma.entity;
 /**
  * Created by MSI GT70 on 19.02.2017.
  */
-public class Stock {
+public class Stock extends DataBaseEntity {
     private int stockId;
     private int stockMaterials;
     private float stockAmount;

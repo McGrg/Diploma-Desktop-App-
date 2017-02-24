@@ -3,7 +3,11 @@ package com.mcgrg.diploma.entity;
 /**
  * Created by MSI GT70 on 17.02.2017.
  */
-public class Usergroups {
+public class Usergroups extends DataBaseEntity {
+
+    private int usergroupId;
+    private String usergroupName;
+
     public int getUsergroupId() {
         return usergroupId;
     }
@@ -25,6 +29,5 @@ public class Usergroups {
         return "ID: " + getUsergroupId() + " : " +  getUsergroupName();
     }
 
-    private int usergroupId;
-    private String usergroupName;
+
 }

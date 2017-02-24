@@ -3,7 +3,14 @@ package com.mcgrg.diploma.entity;
 /**
  * Created by MSI GT70 on 21.02.2017.
  */
-public class Users {
+public class Users  extends DataBaseEntity{
+
+    private int userID;
+    private String userName;
+    private String userSurname;
+    private String userThirdname;
+    private String position;
+
     public int getUserID() {
         return userID;
     }
@@ -44,9 +51,10 @@ public class Users {
         this.position = position;
     }
 
-    private int userID;
-    private String userName;
-    private String userSurname;
-    private String userThirdname;
-    private String position;
+    @Override
+    public String toString() {
+        return "ID: " + getUserID() + " " + getUserName() + " "
+                + getUserSurname() + " " + getUserThirdname() + " "
+                + getPosition();
+    }
 }

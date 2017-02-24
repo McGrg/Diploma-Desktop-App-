@@ -1,4 +1,4 @@
-package com.mcgrg.diploma.Main.KindOfControllers;
+package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
 import com.mcgrg.diploma.connection.SelectEntityRequest;

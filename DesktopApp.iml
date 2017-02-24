@@ -10,5 +10,6 @@
     <orderEntry type="library" name="com.google.code.gson:gson:2.8.0" level="project" />
     <orderEntry type="library" name="com.github.kevinsawicki:http-request:6.0" level="project" />
     <orderEntry type="library" name="DesktopApp" level="project" />
+    <orderEntry type="library" name="org.apache.commons:commons-lang3:3.3.2" level="project" />
   </component>
 </module>

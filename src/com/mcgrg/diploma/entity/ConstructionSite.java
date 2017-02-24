@@ -3,7 +3,7 @@ package com.mcgrg.diploma.entity;
 /**
  * Created by MSI GT70 on 20.02.2017.
  */
-public class ConstructionSite {
+public class ConstructionSite extends DataBaseEntity{
     private int conssiteId;
     private String conssiteCity;
     private String conssiteStreet;
@@ -68,10 +68,10 @@ public class ConstructionSite {
         this.manager = manager;
     }
 
-//    @Override
-//    public String toString() {
-//        return "ID: " + getConssiteId() + " " +  getConssiteCity() + " "
-//                + getConssiteStreet() + " " + getConssiteBilding() + " "
-//                + getStartDate() + " " + getFinishDate() + " " + getManager();
-//    }
+    @Override
+    public String toString() {
+        return "ID: " + getConssiteId() + " " +  getConssiteCity() + " "
+                + getConssiteStreet() + " " + getConssiteBilding() + " "
+                + getStartDate() + " " + getFinishDate() + " " + getManager();
+    }
 }

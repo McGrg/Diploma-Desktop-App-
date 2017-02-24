@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="ConstructionSitesView" maxHeight="800.0" maxWidth="960.0" prefHeight="800.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mcgrg.diploma.Main.KindOfControllers.ConsSiteController">
+<AnchorPane fx:id="ConstructionSitesView" maxHeight="800.0" maxWidth="960.0" prefHeight="800.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mcgrg.diploma.Main.ConsSiteController">
    <children>
       <Button fx:id="btnData" layoutX="21.0" layoutY="761.0" mnemonicParsing="false"  onAction="#onClickMethod" text="Получить данные" />
       <TableView fx:id="ConstructionSitesTable" editable="true" layoutX="28.0" layoutY="26.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0">
