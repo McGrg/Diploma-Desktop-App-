@@ -19,17 +19,17 @@ public class FIOConverter extends StringConverter<FioUsers> {
         FioUsers fio = null;
 
         if (str.equals(null)) return fio;
-        str = str.trim();
+//        str = str.trim();
         int spaceAmount = StringUtils.countMatches(str, " ");
         switch (spaceAmount) {
             case 0: {
-                fio = new FioUsers(str, "", "");
+                fio = null;
             }
             break;
             case 1: {
-                int spaceIndex = StringUtils.indexOf(str, " ");
+                int spaceIndex = StringUtils.indexOf(str, "");
                 String surame = str.substring(0, spaceIndex);
-                String name = str.substring(spaceIndex + 2);
+                String name = str.substring(spaceIndex + 1);
                 fio = new FioUsers(surame, name, "");
             }
             break;
@@ -37,8 +37,8 @@ public class FIOConverter extends StringConverter<FioUsers> {
                 int spaceIndexFirst = StringUtils.indexOf(str, " ");
                 int spaceIndexSecond = StringUtils.lastIndexOf(str, " ");
                 String surame = str.substring(0, spaceIndexFirst);
-                String thirdName = str.substring(spaceIndexSecond + 2);
-                String name = str.substring(spaceIndexFirst + 2, spaceIndexSecond);
+                String thirdName = str.substring(spaceIndexSecond + 1);
+                String name = str.substring(spaceIndexFirst + 1, spaceIndexSecond);
                 fio = new FioUsers(surame, name, thirdName);
             }
             break;

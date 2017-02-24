@@ -2,6 +2,7 @@ package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
+import com.mcgrg.diploma.entity.Authentifikation;
 import com.mcgrg.diploma.entity.FIOConverter;
 import com.mcgrg.diploma.entity.FioUsers;
 import com.mcgrg.diploma.entity.Users;
@@ -36,29 +37,38 @@ public class AuthController {
 
     @FXML
     public void onClickMethod() {
-        if (!txtPassword.getText().equals("")) {
-            Stage stage = (Stage) btnSubmit.getScene().getWindow();
-            stage.hide();
-
+        if ((comboBox.getValue() != null) && (!txtPassword.getText().equals(""))) {
             SelectEntityRequest ser = new SelectEntityRequest();
-//            List<Authentifikation> passwordsList = ser.setRequestWhere(new TypeToken<List<Authentifikation>>() {
-//            }.getType(), "authentifikation_name", comboBox.getValue().toString());
-//            for (Authentifikation auth : passwordsList) {
-//                if (auth.getAuthentifikation_password().equals(txtPassword.getText()) && auth.getAuthentifikation_name().equals(comboBox.getValue())) {
-                    try {
-                        Stage primaryStage = new Stage();
-                        Parent fxmlLoader = FXMLLoader.load(getClass().getResource("ConsSiteForm.fxml"));
-                        Scene scene = new Scene(fxmlLoader);
-                        primaryStage.setScene(scene);
-                        primaryStage.setTitle("Construction sites");
-                        primaryStage.show();
-                    } catch (Exception e) {
-                        System.out.println(e.toString() + " :" + "Can't load new view!");
+            System.out.println(txtPassword.getText());
+            System.out.println(comboBox.getValue().toString());
+            try {
+                List<Authentifikation> passwordsList = ser.setRequestWhere(new TypeToken<List<Authentifikation>>() {
+                }.getType(), "authentifikation_name", comboBox.getValue().toString());
+                for (Authentifikation auth : passwordsList) {
+                    System.out.println(auth.getAuthentifikation_password().trim());
+                    System.out.println(auth.getAuthentifikation_name().trim());
+                    if ((auth.getAuthentifikation_password().trim().equals(txtPassword.getText())) && (auth.getAuthentifikation_name().trim().equals(comboBox.getValue().toString()))) {
+                        try {
+                            Stage primaryStage = new Stage();
+                            Parent fxmlLoader = FXMLLoader.load(getClass().getResource("ConsSiteForm.fxml"));
+                            Scene scene = new Scene(fxmlLoader);
+                            primaryStage.setScene(scene);
+                            primaryStage.setTitle("Construction sites");
+                            primaryStage.show();
+                            Stage stage = (Stage) btnSubmit.getScene().getWindow();
+                            stage.hide();
+                        } catch (Exception e) {
+                            System.out.println(e.toString() + " :" + "Can't load new view!");
+                        }
                     }
                 }
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e.toString(),
+                        "Ошибка!",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
-//        }
-//    }
+        }
+    }
 
     @FXML
     public void initialize() {
@@ -68,7 +78,7 @@ public class AuthController {
             comboBox.setPromptText(" Выберите имя");
             comboBox.setStyle("-fx-font: 18px \"System\";");
 
-            // Define rendering of the list of values in ComboBox drop down. 
+            // Define rendering of the list of values in ComboBox drop down.
             comboBox.setCellFactory((comboBox) -> {
                 return new ListCell<FioUsers>() {
                     @Override
@@ -84,7 +94,7 @@ public class AuthController {
                 };
             });
 
-// Define rendering of selected value shown in ComboBox.
+            // Define rendering of selected value shown in ComboBox.
             comboBox.setConverter(new FIOConverter());
 
             comboBox.setOnAction((event) -> {
