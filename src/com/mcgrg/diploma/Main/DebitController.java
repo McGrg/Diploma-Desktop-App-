@@ -1,6 +1,7 @@
 package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
+import com.mcgrg.diploma.AdditionalEntities.PileName;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
 import com.mcgrg.diploma.entity.Debitstandart;
 import com.mcgrg.diploma.entity.PileTypes;
@@ -37,7 +38,7 @@ public class DebitController {
     private Label lblConsSite; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbPileType"
-    private ComboBox<?> cmbPileType; // Value injected by FXMLLoader
+    private ComboBox<PileName> cmbPileType; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtPileAmount"
     private TextField txtPileAmount; // Value injected by FXMLLoader
@@ -88,24 +89,11 @@ public class DebitController {
     @FXML
     public void initialize() {
         cmbPileType.setStyle("-fx-font: 18px \"System\";");
+        cmbPileType.getItems().addAll(setPiles());
         datePicker.setStyle("-fx-font: 18px \"System\";");
-        setPileTypes();
         setDebitStandart();
     }
 
-    private List<PileTypes>  setPileTypes(){
-        List<PileTypes> pilesList = new ArrayList<>();
-        try {
-            SelectEntityRequest ser = new SelectEntityRequest();
-            pilesList = ser.setRequest(new TypeToken<List<PileTypes>>() {
-            }.getType());
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Изготовление свай: " + e.toString(),
-                    "Ошибка!",
-                    JOptionPane.INFORMATION_MESSAGE);
-        }
-        return pilesList;
-    }
 
     private List<Debitstandart>  setDebitStandart(){
         List<Debitstandart> standartsList = new ArrayList<>();
@@ -119,5 +107,24 @@ public class DebitController {
                     JOptionPane.INFORMATION_MESSAGE);
         }
         return standartsList;
+    }
+
+    private ArrayList<PileName> setPiles() {
+        List<PileTypes> piletypeList;
+        ArrayList<PileName> pileList = new ArrayList<>();
+        try {
+            SelectEntityRequest ser = new SelectEntityRequest();
+            piletypeList = ser.setRequest(new TypeToken<List<PileTypes>>() {
+            }.getType());
+            for (PileTypes piles : piletypeList) {
+                PileName pile = new PileName(piles.getPileTypesName());
+                pileList.add(pile);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Отсутствует связь с сервером, проверьте сетевое подключение",
+                    "Ошибка!",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        return pileList;
     }
 }

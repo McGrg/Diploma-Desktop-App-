@@ -2,10 +2,9 @@ package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
 import com.mcgrg.diploma.AdditionalEntities.Address;
+import com.mcgrg.diploma.AdditionalEntities.FioUsers;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
 import com.mcgrg.diploma.entity.ConstructionSite;
-import com.mcgrg.diploma.AdditionalEntities.FIOConverter;
-import com.mcgrg.diploma.AdditionalEntities.FioUsers;
 import com.mcgrg.diploma.entity.Users;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -85,27 +84,27 @@ public class AuthController {
             cmbAddress.setStyle("-fx-font: 18px \"System\";");
 
             // Define rendering of the list of values in ComboBox drop down.
-            cmbName.setCellFactory((comboBox) -> {
-                return new ListCell<FioUsers>() {
-                    @Override
-                    protected void updateItem(FioUsers item, boolean empty) {
-                        super.updateItem(item, empty);
-
-                        if (item == null || empty) {
-                            setText(null);
-                        } else {
-                            setText(item.getFio());
-                        }
-                    }
-                };
-            });
+//            cmbName.setCellFactory((comboBox) -> {
+//                return new ListCell<FioUsers>() {
+//                    @Override
+//                    protected void updateItem(FioUsers item, boolean empty) {
+//                        super.updateItem(item, empty);
+//
+//                        if (item == null || empty) {
+//                            setText(null);
+//                        } else {
+//                            setText(item.getFio());
+//                        }
+//                    }
+//                };
+//            });
 
             // Define rendering of selected value shown in ComboBox.
-            cmbName.setConverter(new FIOConverter());
-
-            cmbName.setOnAction((event) -> {
-                FioUsers selectedFioUsers = cmbName.getSelectionModel().getSelectedItem();
-            });
+//            cmbName.setConverter(new FIOConverter());
+//
+//            cmbName.setOnAction((event) -> {
+//                FioUsers selectedFioUsers = cmbName.getSelectionModel().getSelectedItem();
+//            });
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e.toString(),
                     "Ошибка!",

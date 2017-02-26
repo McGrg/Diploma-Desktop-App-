@@ -1,8 +1,11 @@
 package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
+import com.mcgrg.diploma.AdditionalEntities.FioUsers;
 import com.mcgrg.diploma.connection.InsertEntityRequest;
+import com.mcgrg.diploma.connection.SelectEntityRequest;
 import com.mcgrg.diploma.entity.Stock;
+import com.mcgrg.diploma.entity.Users;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -14,6 +17,8 @@ import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class NewConstructionSiteController {
 
@@ -27,7 +32,7 @@ public class NewConstructionSiteController {
     private Label lblChef; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbFioUsers"
-    private ComboBox<?> cmbFioUsers; // Value injected by FXMLLoader
+    private ComboBox<FioUsers> cmbFioUsers; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnNewConsSite"
     private Button btnNewConsSite; // Value injected by FXMLLoader
@@ -112,6 +117,27 @@ public class NewConstructionSiteController {
     @FXML
     public void initialize() {
         cmbFioUsers.setStyle("-fx-font: 18px \"System\";");
+        cmbFioUsers.getItems().addAll( setUserName());
+    }
+
+    private ArrayList<FioUsers> setUserName() {
+        List<Users> usersList;
+        ArrayList<FioUsers> fioList = new ArrayList<>();
+        try {
+            SelectEntityRequest ser = new SelectEntityRequest();
+            usersList = ser.setRequest(new TypeToken<List<Users>>() {
+            }.getType());
+            for (Users users : usersList) {
+                if (users.getUserThirdname() == null) users.setUserThirdname("");
+                FioUsers fio = new FioUsers(users.getUserSurname(), users.getUserName(), users.getUserThirdname());
+                fioList.add(fio);
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Отсутствует связь с сервером, проверьте сетевое подключение",
+                    "Ошибка!",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        return fioList;
     }
 
 }
