@@ -12,6 +12,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 
 public class NewConstructionSiteController {
@@ -98,16 +99,12 @@ public class NewConstructionSiteController {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            Stage secondaryStage = new Stage();
-            Parent fxmlLoaderTwo = FXMLLoader.load(getClass().getResource("OkForm.fxml"));
-            Scene sceneTwo = new Scene(fxmlLoaderTwo);
-            secondaryStage.setScene(sceneTwo);
-            secondaryStage.setTitle("Успешно!");
-            secondaryStage.setResizable(false);
-            secondaryStage.show();
+            JOptionPane.showMessageDialog(null, "Указанные данные добавлены",
+                    "Ошибка!",
+                    JOptionPane.INFORMATION_MESSAGE);
             Stage stage = (Stage) btnEnter.getScene().getWindow();
             stage.hide();
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println(e.toString() + " :" + "Can't load new view!");
         }
     }

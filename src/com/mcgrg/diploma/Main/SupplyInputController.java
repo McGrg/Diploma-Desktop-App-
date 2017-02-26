@@ -97,4 +97,9 @@ public class SupplyInputController {
     private void onClickMethodAdd(){
 
     }
+
+    @FXML
+    public void initialize() {
+
+    }
 }

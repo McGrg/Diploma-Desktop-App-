@@ -2,6 +2,7 @@ package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
+import com.mcgrg.diploma.entity.Debitstandart;
 import com.mcgrg.diploma.entity.PileTypes;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -89,6 +90,7 @@ public class DebitController {
         cmbPileType.setStyle("-fx-font: 18px \"System\";");
         datePicker.setStyle("-fx-font: 18px \"System\";");
         setPileTypes();
+        setDebitStandart();
     }
 
     private List<PileTypes>  setPileTypes(){
@@ -103,5 +105,19 @@ public class DebitController {
                     JOptionPane.INFORMATION_MESSAGE);
         }
         return pilesList;
+    }
+
+    private List<Debitstandart>  setDebitStandart(){
+        List<Debitstandart> standartsList = new ArrayList<>();
+        try {
+            SelectEntityRequest ser = new SelectEntityRequest();
+            standartsList = ser.setRequest(new TypeToken<List<Debitstandart>>() {
+            }.getType());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Изготовление свай: " + e.toString(),
+                    "Ошибка!",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        return standartsList;
     }
 }

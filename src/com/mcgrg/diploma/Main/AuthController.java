@@ -2,6 +2,7 @@ package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
+import com.mcgrg.diploma.entity.ConstructionSite;
 import com.mcgrg.diploma.entity.FIOConverter;
 import com.mcgrg.diploma.entity.FioUsers;
 import com.mcgrg.diploma.entity.Users;
@@ -76,6 +77,7 @@ public class AuthController {
     private void initialize() {
 
         try {
+            setSites();
             cmbName.getItems().addAll(setUserName());
             cmbName.setPromptText(" Выберите имя");
             cmbName.setStyle("-fx-font: 18px \"System\";");
@@ -128,6 +130,20 @@ public class AuthController {
                     JOptionPane.INFORMATION_MESSAGE);
         }
         return fioList;
+    }
+
+    private List<ConstructionSite> setSites(){
+        List<ConstructionSite> sitesList = new ArrayList<>();
+        try {
+            SelectEntityRequest ser = new SelectEntityRequest();
+            sitesList = ser.setRequest(new TypeToken<List<ConstructionSite>>() {
+            }.getType());
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Аутотентификация:" + e.toString(),
+                    "Ошибка!",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+        return sitesList;
     }
     //----------------------------------------------------------------------------------------------
 }

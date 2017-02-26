@@ -97,6 +97,7 @@ public class SupplyController {
     public void initialize() {
         datepickerOperDate.setStyle("-fx-font: 18px \"System\";");
         cmbMaterialName.setStyle("-fx-font: 18px \"System\";");
+        setMaterials();
     }
 
     private List<Materials> setMaterials(){

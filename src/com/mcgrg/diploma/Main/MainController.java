@@ -108,7 +108,9 @@ public class MainController {
     }
 
     @FXML
-    public void initialize() {}
+    public void initialize() {
+        
+    }
 
 }
 
