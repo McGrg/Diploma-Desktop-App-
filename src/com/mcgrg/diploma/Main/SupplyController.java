@@ -77,7 +77,7 @@ public class SupplyController {
     }
 
     @FXML
-    private void onClickMethodInputData() {
+    private void onClickMethodEnter() {
         try {
             Stage primaryStage = new Stage();
             Parent fxmlLoader = FXMLLoader.load(getClass().getResource("SupplyInputForm.fxml"));
