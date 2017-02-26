@@ -34,17 +34,17 @@
       </HBox>
       <HBox layoutX="367.0" layoutY="251.0" prefHeight="47.0" prefWidth="259.0" spacing="10.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="15.0">
          <children>
-            <Button fx:id="btnExit" mnemonicParsing="false" text="Выход">
+            <Button fx:id="btnExit" mnemonicParsing="false" onAction="#onClickMethodExit" text="Выход">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancel" mnemonicParsing="false" text="Отмена">
+            <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#onClickMethodCancel" text="Отмена">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnEnter" mnemonicParsing="false" text="Ввод">
+            <Button fx:id="btnEnter" mnemonicParsing="false" onAction="#onClickMethodEnter" text="Ввод">
                <font>
                   <Font size="18.0" />
                </font>
@@ -56,5 +56,10 @@
             <Font size="18.0" />
          </font>
       </Label>
+      <Button fx:id="btnNewConsSite" layoutX="27.0" layoutY="413.0" onAction="#onClickMethodNewSite" mnemonicParsing="false" text="Добавление нового объекта" AnchorPane.bottomAnchor="28.0" AnchorPane.leftAnchor="25.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

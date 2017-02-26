@@ -45,7 +45,7 @@
                </GridPane.margin>
             </Label>
             <ComboBox fx:id="cmbFioUsers" prefWidth="150.0" promptText="Выбрать" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="btnNewConsSite" mnemonicParsing="false" text="Ввести адрес" GridPane.rowIndex="1">
+            <Button fx:id="btnNewConsSite" onAction="#onClickMethodNewSite" mnemonicParsing="false" text="Ввести адрес" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" top="10.0" />
                </GridPane.margin>
@@ -60,19 +60,19 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Button fx:id="btnNewDebit" layoutX="15.0" layoutY="242.0" mnemonicParsing="false" text="Установить нормативы" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="230.0">
+      <Button fx:id="btnNewDebit" layoutX="15.0" layoutY="242.0" onAction="#onClickMethodNewDebit" mnemonicParsing="false" text="Установить нормативы" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="230.0">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
       <HBox layoutX="385.0" layoutY="286.0" prefHeight="50.0" prefWidth="200.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
          <children>
-            <Button fx:id="btnCancel" mnemonicParsing="false" text="Отмена">
+            <Button fx:id="btnCancel"  onAction="#onClickMethodCancel" mnemonicParsing="false" text="Отмена">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnEnter" mnemonicParsing="false" text="Ввод">
+            <Button fx:id="btnEnter"  onAction="#onClickMethodEnter" mnemonicParsing="false" text="Ввод">
                <font>
                   <Font size="18.0" />
                </font>

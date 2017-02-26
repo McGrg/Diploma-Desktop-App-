@@ -14,17 +14,17 @@
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="386.0" layoutY="286.0" prefHeight="68.0" prefWidth="348.0" spacing="10.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="15.0">
          <children>
-            <Button fx:id="btnBack" mnemonicParsing="false" text="Назад">
+            <Button fx:id="btnBack" onAction="#onClickMethodBack" mnemonicParsing="false" text="Назад">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancel" mnemonicParsing="false" text="Отмена">
+            <Button fx:id="btnCancel" onAction="#onClickMethodCancel" mnemonicParsing="false" text="Отмена">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnEnter" mnemonicParsing="false" text="Ввод данных">
+            <Button fx:id="btnEnter" onAction="#onClickMethodInputData" mnemonicParsing="false" text="Ввод данных">
                <font>
                   <Font size="18.0" />
                </font>

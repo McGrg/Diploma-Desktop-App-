@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="SupplyForm" maxHeight="240.0" maxWidth="640.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="SupplyForm" maxHeight="240.0" maxWidth="777.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="240.0" prefWidth="777.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mcgrg.diploma.Main.SupplyController">
    <children>
-      <GridPane prefHeight="237.0" prefWidth="640.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="65.0">
+      <GridPane hgap="10.0" prefHeight="237.0" prefWidth="640.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="65.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -36,9 +36,15 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <DatePicker fx:id="datepickerOperDate" GridPane.rowIndex="1" />
-            <ComboBox fx:id="cmbMaterialName" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="txtAmount" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <DatePicker fx:id="datepickerOperDate" prefHeight="40.0" prefWidth="249.0" GridPane.rowIndex="1" />
+            <ComboBox fx:id="cmbMaterialName" prefHeight="40.0" prefWidth="252.0" promptText="Название материала" visibleRowCount="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ComboBox>
+            <TextField fx:id="txtAmount" prefHeight="40.0" prefWidth="249.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="18.0" />
                </font>
@@ -50,19 +56,19 @@
             </Label>
          </children>
       </GridPane>
-      <HBox alignment="CENTER_RIGHT" layoutX="292.0" layoutY="162.0" prefHeight="68.0" prefWidth="334.0" spacing="10.0">
+      <HBox alignment="CENTER_RIGHT" layoutX="292.0" layoutY="162.0" prefHeight="68.0" prefWidth="334.0" spacing="10.0" AnchorPane.bottomAnchor="15.0" AnchorPane.rightAnchor="15.0">
          <children>
-            <Button fx:id="btnBack" mnemonicParsing="false" text="Назад">
+            <Button fx:id="btnBack" onAction="#onClickMethodBack" mnemonicParsing="false" text="Назад">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnCancel" mnemonicParsing="false" text="Отмена">
+            <Button fx:id="btnCancel" onAction="#onClickMethodCancel" mnemonicParsing="false" text="Отмена">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button fx:id="btnEnter" mnemonicParsing="false" text="Ввод данных">
+            <Button fx:id="btnEnter" onAction="#onClickMethodEnter" mnemonicParsing="false" text="Ввод данных">
                <font>
                   <Font size="18.0" />
                </font>
