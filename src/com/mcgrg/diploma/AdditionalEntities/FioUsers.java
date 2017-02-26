@@ -1,4 +1,6 @@
-package com.mcgrg.diploma.entity;
+package com.mcgrg.diploma.AdditionalEntities;
+
+import com.mcgrg.diploma.entity.Users;
 
 /**
  * Created by MSI GT70 on 22.02.2017.

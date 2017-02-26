@@ -2,17 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/Address.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialName.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialNameConverter.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/AuthController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/AuthController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/DebitController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/DebitController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/MainController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddress.fxml" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddress.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddressController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddressController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewConstructionSiteController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewConstructionSiteController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandart.fxml" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandart.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandartController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandartController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyInputController.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyInputController.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/entity/FIOConverter.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/FIOConverter.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/mcgrg/diploma/entity/FioUsers.java" afterPath="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/FioUsers.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,21 +82,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AuthController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/AuthController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="129" column="53" lean-forward="true" selection-start-line="127" selection-start-column="12" selection-end-line="129" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewAddressController.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddressController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+            <state relative-caret-position="51">
+              <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,15 +94,126 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NewAddress.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddress.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
+      <file leaf-file-name="JAVA/com.mcgrg.diploma" pinned="false" current-in-tab="false">
+        <entry file="uml://JAVA/com.mcgrg.diploma">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>JAVA</ID>
+              <OriginalElement>com.mcgrg.diploma</OriginalElement>
+              <nodes>
+                <node x="225.79861111111111" y="0.0">com.mcgrg.diploma.entity</node>
+                <node x="220.54861111111111" y="178.0">com.mcgrg.diploma.Main</node>
+                <node x="372.5" y="79.0">com.mcgrg.diploma.connection</node>
+                <node x="215.5" y="79.0">com.mcgrg.diploma.Interfaces</node>
+                <node x="21.5" y="79.0">com.mcgrg.diploma.AdditionalEntities</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="com.mcgrg.diploma.Main" target="com.mcgrg.diploma.connection">
+                  <point x="39.375" y="-14.5" />
+                  <point x="312.4236111111111" y="158.0" />
+                  <point x="443.5" y="158.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="com.mcgrg.diploma.AdditionalEntities" target="com.mcgrg.diploma.entity">
+                  <point x="0.0" y="-14.5" />
+                  <point x="108.5" y="54.0" />
+                  <point x="244.63194444444446" y="54.0" />
+                  <point x="-37.666666666666664" y="14.5" />
+                </edge>
+                <edge source="com.mcgrg.diploma.Main" target="com.mcgrg.diploma.entity">
+                  <point x="13.125" y="-14.5" />
+                  <point x="286.1736111111111" y="148.0" />
+                  <point x="362.0" y="148.0" />
+                  <point x="362.0" y="54.0" />
+                  <point x="319.96527777777777" y="54.0" />
+                  <point x="37.66666666666666" y="14.5" />
+                </edge>
+                <edge source="com.mcgrg.diploma.AdditionalEntities" target="com.mcgrg.diploma.AdditionalEntities">
+                  <point x="-58.0" y="14.5" />
+                  <point x="50.5" y="128.0" />
+                  <point x="1.5" y="128.0" />
+                  <point x="1.5" y="93.5" />
+                  <point x="-87.0" y="-0.0" />
+                </edge>
+                <edge source="com.mcgrg.diploma.Interfaces" target="com.mcgrg.diploma.entity">
+                  <point x="0.0" y="-14.5" />
+                  <point x="283.5" y="54.0" />
+                  <point x="282.2986111111111" y="54.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+                <edge source="com.mcgrg.diploma.Main" target="com.mcgrg.diploma.AdditionalEntities">
+                  <point x="-39.375" y="-14.5" />
+                  <point x="233.67361111111111" y="158.0" />
+                  <point x="108.5" y="158.0" />
+                  <point x="0.0" y="14.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="1.0" x="-245.5" y="59.5" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Methods</Category>
+              </Categories>
+              <SCOPE>All</SCOPE>
+              <VISIBILITY>private</VISIBILITY>
+            </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Address.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/Address.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+            <state relative-caret-position="425">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FioUsers.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/FioUsers.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="32" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FIOConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/FIOConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+              <folding>
+                <element signature="e#284#285#0" expanded="false" />
+                <element signature="e#340#341#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaterialName.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#555#556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MaterialNameConverter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialNameConverter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#590#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -123,52 +221,10 @@
       <file leaf-file-name="SupplyController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="76" column="5" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="76" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DebitController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/DebitController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
-              <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+            <state relative-caret-position="345">
+              <caret line="98" column="66" lean-forward="false" selection-start-line="98" selection-start-column="66" selection-end-line="98" selection-end-column="66" />
               <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Materials.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/entity/Materials.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewConstructionSiteController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewConstructionSiteController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewDebitStandartController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandartController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -220,10 +276,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/entity/ConstructionSites.java" />
-        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/entity/ConsSiteServer.java" />
-        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/entity/ConsSiteTable.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/Controller.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/ConsSiteController.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/TestForm.fxml" />
@@ -261,9 +313,7 @@
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/connection/InsertEntityRequest.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/connection/SelectEntityRequest.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyForm.fxml" />
-        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyController.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/MainController.java" />
-        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/AuthController.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/DebitController.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyInputController.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandart.fxml" />
@@ -271,6 +321,12 @@
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandartController.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewConstructionSiteController.java" />
         <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddressController.java" />
+        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/FIOConverter.java" />
+        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialName.java" />
+        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyController.java" />
+        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialNameConverter.java" />
+        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/Address.java" />
+        <option value="$PROJECT_DIR$/src/com/mcgrg/diploma/Main/AuthController.java" />
       </list>
     </option>
   </component>
@@ -306,6 +362,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -374,10 +432,68 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesktopApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesktopApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcgrg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diploma" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesktopApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DesktopApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcgrg" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="diploma" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AdditionalEntities" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -405,14 +521,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../Diploma.Test2Servlet-InputServlet" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Studies\Diploma\DesktopApp\src\com\mcgrg\diploma\connection" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Studies\Diploma\DesktopApp\src\com\mcgrg\diploma\Main" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.mcgrg.diploma.entity" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Studies\Diploma\DesktopApp\src\com\mcgrg\diploma\Main" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Studies\Diploma\DesktopApp\src\com\mcgrg\diploma\connection" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -883,7 +999,8 @@
       <workItem from="1488049107354" duration="18000" />
       <workItem from="1488049721261" duration="465000" />
       <workItem from="1488051633114" duration="35000" />
-      <workItem from="1488100525909" duration="16960000" />
+      <workItem from="1488100525909" duration="17008000" />
+      <workItem from="1488121450241" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="Added ButtonOnClick Method">
       <created>1487534756478</created>
@@ -962,11 +1079,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488117660768</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Added ButtonOnClick Method, added Entity, added Servlet Request, getting first Data from server!&#10;Excluded dublikated classes whith SimpleBlaBlaProperties. Added authentifikation view. Working 2 windows! Added forms. Added onClickMethods. Need to override equals for authentifikation class. Added Pile Types Entity 26.02.2017">
+      <created>1488120697100</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1488120697100</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="134926000" />
+    <option name="totallyTimeSpent" value="137224000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -996,7 +1120,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29104477" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20788912" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1074,11 +1198,12 @@
     <MESSAGE value="Added ButtonOnClick Method, added Entity, added Servlet Request, getting first Data from server!&#10;Excluded dublikated classes whith SimpleBlaBlaProperties. Added authentifikation view. Working 2 windows! Added forms. Need to override equals for authentifikation class. 25.02.2017." />
     <MESSAGE value="Added ButtonOnClick Method, added Entity, added Servlet Request, getting first Data from server!&#10;Excluded dublikated classes whith SimpleBlaBlaProperties. Added authentifikation view. Working 2 windows! Added forms. Added onClickMethods. Need to override equals for authentifikation class. 26.02.2017" />
     <MESSAGE value="Added ButtonOnClick Method, added Entity, added Servlet Request, getting first Data from server!&#10;Excluded dublikated classes whith SimpleBlaBlaProperties. Added authentifikation view. Working 2 windows! Added forms. Added onClickMethods. Need to override equals for authentifikation class. Added DebitStandartEntity 26.02.2017" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ButtonOnClick Method, added Entity, added Servlet Request, getting first Data from server!&#10;Excluded dublikated classes whith SimpleBlaBlaProperties. Added authentifikation view. Working 2 windows! Added forms. Added onClickMethods. Need to override equals for authentifikation class. Added DebitStandartEntity 26.02.2017" />
+    <MESSAGE value="Added ButtonOnClick Method, added Entity, added Servlet Request, getting first Data from server!&#10;Excluded dublikated classes whith SimpleBlaBlaProperties. Added authentifikation view. Working 2 windows! Added forms. Added onClickMethods. Need to override equals for authentifikation class. Added Pile Types Entity 26.02.2017" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added ButtonOnClick Method, added Entity, added Servlet Request, getting first Data from server!&#10;Excluded dublikated classes whith SimpleBlaBlaProperties. Added authentifikation view. Working 2 windows! Added forms. Added onClickMethods. Need to override equals for authentifikation class. Added Pile Types Entity 26.02.2017" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="19" />
+      <option name="time" value="20" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1087,15 +1212,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/entity/ConsSiteTable.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/sample.fxml" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_112/javafx-src.zip!/javafx/scene/control/ComboBoxBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="149" column="22" lean-forward="false" selection-start-line="149" selection-start-column="22" selection-end-line="149" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/ForAuthentifikation/AuthUsers.java" />
     <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Interfaces/WrapperConstructionSite.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1118,32 +1234,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="22" column="5" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="22" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://JAVA/com.mcgrg.diploma">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>JAVA</ID>
-          <OriginalElement>com.mcgrg.diploma</OriginalElement>
-          <nodes>
-            <node x="" y="">com.mcgrg.diploma.entity</node>
-            <node x="" y="">com.mcgrg.diploma.Main</node>
-            <node x="" y="">com.mcgrg.diploma.connection</node>
-            <node x="" y="">com.mcgrg.diploma.Interfaces</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="138.0" y="205.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Properties</Category>
-            <Category>Methods</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
@@ -1260,20 +1350,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/entity/FioUsers.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="58" lean-forward="false" selection-start-line="11" selection-start-column="58" selection-end-line="11" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/entity/FIOConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/MainWindow.fxml" />
     <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/ConsSiteForm.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
@@ -1357,7 +1433,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="23" column="38" lean-forward="true" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1411,7 +1486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="383">
           <caret line="74" column="67" lean-forward="true" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="67" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1430,9 +1504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1440,9 +1511,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1454,36 +1522,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/DebitController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="93" column="5" lean-forward="true" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/entity/Operations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-211">
           <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="62" selection-start-column="4" selection-end-line="76" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/entity/Materials.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
           <folding />
         </state>
       </provider>
@@ -1505,33 +1547,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="59" column="66" lean-forward="false" selection-start-line="59" selection-start-column="66" selection-end-line="59" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/AuthController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddressController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="129" column="53" lean-forward="true" selection-start-line="127" selection-start-column="12" selection-end-line="129" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandartController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="72" column="25" lean-forward="true" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+        <state relative-caret-position="645">
+          <caret line="73" column="9" lean-forward="false" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewConstructionSiteController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1541,15 +1566,173 @@
       </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="515">
-          <caret line="76" column="18" lean-forward="true" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
+          <caret line="76" column="18" lean-forward="false" selection-start-line="76" selection-start-column="18" selection-end-line="76" selection-end-column="18" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewAddressController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/DebitController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="73" column="9" lean-forward="true" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
+        <state relative-caret-position="316">
+          <caret line="93" column="5" lean-forward="false" selection-start-line="93" selection-start-column="5" selection-end-line="93" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/entity/Materials.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="33" lean-forward="false" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewConstructionSiteController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/NewDebitStandartController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/FIOConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="28" lean-forward="false" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="e#284#285#0" expanded="false" />
+            <element signature="e#340#341#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/SupplyController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="98" column="66" lean-forward="false" selection-start-line="98" selection-start-column="66" selection-end-line="98" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialNameConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#590#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/MaterialName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#555#556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://JAVA/com.mcgrg.diploma">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement>com.mcgrg.diploma</OriginalElement>
+          <nodes>
+            <node x="225.79861111111111" y="0.0">com.mcgrg.diploma.entity</node>
+            <node x="220.54861111111111" y="178.0">com.mcgrg.diploma.Main</node>
+            <node x="372.5" y="79.0">com.mcgrg.diploma.connection</node>
+            <node x="215.5" y="79.0">com.mcgrg.diploma.Interfaces</node>
+            <node x="21.5" y="79.0">com.mcgrg.diploma.AdditionalEntities</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="com.mcgrg.diploma.Main" target="com.mcgrg.diploma.connection">
+              <point x="39.375" y="-14.5" />
+              <point x="312.4236111111111" y="158.0" />
+              <point x="443.5" y="158.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="com.mcgrg.diploma.AdditionalEntities" target="com.mcgrg.diploma.entity">
+              <point x="0.0" y="-14.5" />
+              <point x="108.5" y="54.0" />
+              <point x="244.63194444444446" y="54.0" />
+              <point x="-37.666666666666664" y="14.5" />
+            </edge>
+            <edge source="com.mcgrg.diploma.Main" target="com.mcgrg.diploma.entity">
+              <point x="13.125" y="-14.5" />
+              <point x="286.1736111111111" y="148.0" />
+              <point x="362.0" y="148.0" />
+              <point x="362.0" y="54.0" />
+              <point x="319.96527777777777" y="54.0" />
+              <point x="37.66666666666666" y="14.5" />
+            </edge>
+            <edge source="com.mcgrg.diploma.AdditionalEntities" target="com.mcgrg.diploma.AdditionalEntities">
+              <point x="-58.0" y="14.5" />
+              <point x="50.5" y="128.0" />
+              <point x="1.5" y="128.0" />
+              <point x="1.5" y="93.5" />
+              <point x="-87.0" y="-0.0" />
+            </edge>
+            <edge source="com.mcgrg.diploma.Interfaces" target="com.mcgrg.diploma.entity">
+              <point x="0.0" y="-14.5" />
+              <point x="283.5" y="54.0" />
+              <point x="282.2986111111111" y="54.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+            <edge source="com.mcgrg.diploma.Main" target="com.mcgrg.diploma.AdditionalEntities">
+              <point x="-39.375" y="-14.5" />
+              <point x="233.67361111111111" y="158.0" />
+              <point x="108.5" y="158.0" />
+              <point x="0.0" y="14.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-245.5" y="59.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/FioUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/AdditionalEntities/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/mcgrg/diploma/Main/AuthController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="79" column="13" lean-forward="false" selection-start-line="79" selection-start-column="13" selection-end-line="79" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,10 +1,11 @@
 package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
+import com.mcgrg.diploma.AdditionalEntities.Address;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
 import com.mcgrg.diploma.entity.ConstructionSite;
-import com.mcgrg.diploma.entity.FIOConverter;
-import com.mcgrg.diploma.entity.FioUsers;
+import com.mcgrg.diploma.AdditionalEntities.FIOConverter;
+import com.mcgrg.diploma.AdditionalEntities.FioUsers;
 import com.mcgrg.diploma.entity.Users;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -30,7 +31,7 @@ public class AuthController {
     private PasswordField txtPassword;
 
     @FXML
-    private ComboBox<?> cmbAddress;
+    private ComboBox<Address> cmbAddress;
 
     @FXML
     private ComboBox<FioUsers> cmbName;
@@ -77,10 +78,10 @@ public class AuthController {
     private void initialize() {
 
         try {
-            setSites();
             cmbName.getItems().addAll(setUserName());
             cmbName.setPromptText(" Выберите имя");
             cmbName.setStyle("-fx-font: 18px \"System\";");
+            cmbAddress.getItems().addAll(setAddress());
             cmbAddress.setStyle("-fx-font: 18px \"System\";");
 
             // Define rendering of the list of values in ComboBox drop down.
@@ -132,18 +133,23 @@ public class AuthController {
         return fioList;
     }
 
-    private List<ConstructionSite> setSites(){
-        List<ConstructionSite> sitesList = new ArrayList<>();
+    private ArrayList<Address> setAddress() {
+        List<ConstructionSite> consList;
+        ArrayList<Address> addressList = new ArrayList<>();
         try {
             SelectEntityRequest ser = new SelectEntityRequest();
-            sitesList = ser.setRequest(new TypeToken<List<ConstructionSite>>() {
+            consList = ser.setRequest(new TypeToken<List<ConstructionSite>>() {
             }.getType());
+            for (ConstructionSite cons : consList) {
+                Address addr = new Address(cons.getConssiteCity(), cons.getConssiteStreet(), cons.getConssiteBilding());
+                addressList.add(addr);
+            }
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Аутотентификация:" + e.toString(),
+            JOptionPane.showMessageDialog(null, "Отсутствует связь с сервером, проверьте сетевое подключение",
                     "Ошибка!",
                     JOptionPane.INFORMATION_MESSAGE);
         }
-        return sitesList;
+        return addressList;
     }
     //----------------------------------------------------------------------------------------------
 }

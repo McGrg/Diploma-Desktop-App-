@@ -1,4 +1,4 @@
-package com.mcgrg.diploma.entity;
+package com.mcgrg.diploma.AdditionalEntities;
 
 
 import javafx.util.StringConverter;

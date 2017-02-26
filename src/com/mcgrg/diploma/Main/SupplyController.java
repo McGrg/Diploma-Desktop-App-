@@ -1,6 +1,7 @@
 package com.mcgrg.diploma.Main;
 
 import com.google.gson.reflect.TypeToken;
+import com.mcgrg.diploma.AdditionalEntities.MaterialName;
 import com.mcgrg.diploma.connection.SelectEntityRequest;
 import com.mcgrg.diploma.entity.Materials;
 import javafx.fxml.FXML;
@@ -30,7 +31,7 @@ public class SupplyController {
     private DatePicker datepickerOperDate; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbMaterialName"
-    private ComboBox<?> cmbMaterialName; // Value injected by FXMLLoader
+    private ComboBox<MaterialName> cmbMaterialName; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtAmount"
     private TextField txtAmount; // Value injected by FXMLLoader
@@ -96,22 +97,28 @@ public class SupplyController {
     @FXML
     public void initialize() {
         datepickerOperDate.setStyle("-fx-font: 18px \"System\";");
+        cmbMaterialName.getItems().addAll(setMaterials());
         cmbMaterialName.setStyle("-fx-font: 18px \"System\";");
         setMaterials();
     }
 
-    private List<Materials> setMaterials(){
-        List<Materials> materialsList = new ArrayList<>();
+    private ArrayList<MaterialName> setMaterials(){
+        List<Materials> materialsList;
+        ArrayList<MaterialName> matList = new ArrayList<>();
         try {
             SelectEntityRequest ser = new SelectEntityRequest();
             materialsList = ser.setRequest(new TypeToken<List<Materials>>() {
             }.getType());
+            for (Materials mat:materialsList){
+                MaterialName matname = new MaterialName(mat.getMaterialsName());
+                matList.add(matname);
+            }
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Поступление:" + e.toString(),
                     "Ошибка!",
                     JOptionPane.INFORMATION_MESSAGE);
         }
-        return materialsList;
+        return matList;
     }
 
 }
